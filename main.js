@@ -6,15 +6,29 @@ let userChoice  = prompt("Rock, Paper or Scissors").toLocaleLowerCase;
 let computerChoice= function getComputerChoice () {
     const choice = ["rock", "paper", "scissors"];
     const random = Math.floor(Math.random() * choice.length);
-    return choice[random];
+    return choice[random.toString()];
 }
-console.log(computerChoice())
+
 
 //function playing the game
 function playGame(userChoice,computerChoice ) {
- 
-    if
-
-
+    switch(userChoice) {
+        case "rock":
+            if (computerChoice = "scissors") {
+                console.log("You win")
+            }
+            break;
+        case "paper":
+            if(computerChoice ="rock") {
+                console.log("You lose")
+            }
+            break;
+        case "scissors":
+            if(computerChoice="paper") {
+                console.log("You win")
+            }
+            break;
+    }
 }
 
+console.log(playGame())
