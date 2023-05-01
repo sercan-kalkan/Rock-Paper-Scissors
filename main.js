@@ -8,7 +8,8 @@ let  getComputerChoice = function () {
 }
 
 const computerSelection = getComputerChoice();
-
+let playerScore;
+let computerScore;
 
 function playRound (playerSelection, computerSelection) {
     let result;
@@ -29,6 +30,12 @@ function playRound (playerSelection, computerSelection) {
      return result;
 }  
 
+function game () {
+
+      for (let i=0; i<=5; i++) {
+         
+      }
+}
 
 console.log(playRound(playerSelection,computerSelection))
 
