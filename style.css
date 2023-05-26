@@ -1,0 +1,36 @@
+* {
+    font-family: 'Permanent Marker', cursive;
+    background-color: #0e0f0e;
+    color: white;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.buttons {
+    border: 2px solid grey;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.buttons:hover {
+    background-color: red;
+
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+

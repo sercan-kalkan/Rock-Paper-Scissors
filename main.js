@@ -1,19 +1,28 @@
-//getComputerChoice
-let  getComputerChoice = function () {
-    const choice = ["rock", "paper", "scissors"];
-    const random = Math.floor(Math.random() * choice.length);
-    return choice[random];
-}
 
-const computerSelection = getComputerChoice();
+
+const rock =document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+rock.addEventListener('click',function () {playRound ('rock')})
+paper.addEventListener('click',function () {playRound ('paper')});
+scissors.addEventListener('click',function () {playRound ('scissors')});
+
+
 //variables saves the score of players
 let playerScore=0;
 let computerScore=0;
+let result;
 
 
-//function for making choices and defining the winner
 function playRound (playerSelection, computerSelection) {
-   let result;
+   let  getComputerChoice =  () => {
+      const choice = ["rock", "paper", "scissors"];
+      const random = Math.floor(Math.random() * choice.length);
+      return choice[random];
+   }
+    computerSelection = getComputerChoice()
+
     if (playerSelection=="rock" && computerSelection=="scissors") {
        result ="You win! rock beats scissors";
         playerScore++;
@@ -34,25 +43,25 @@ function playRound (playerSelection, computerSelection) {
         computerScore++;
      }else if (playerSelection == computerSelection) {
        result ="Tie"}
-     return `${result} Player score: ${playerScore}  Computer score: ${computerScore}`;
-} 
 
-function game (playRound) {
-   let totalScore;
-      for (let i=0; i<5; i++) {
-         let playerSelection  = prompt("Rock, Paper or Scissors").toLowerCase();
-         console.log(playRound(playerSelection, computerSelection));
-      }
-      if(playerScore > computerScore) {
-         totalScore ="You win the game"
-      } else if(computerScore >playerScore) {
-         totalScore="You lose the game."
-      }
-      return totalScore;
-}
+       if(playerScore>=5|| computerScore>=5) {
+         console.log('GAME OVER')
+         if (playerScore>computerScore) {
 
+         }else if (computerScore>playerScore) {
+            console.log("You Loose")
+         }else {
+            console.log('Tie')
+         }
+       }
 
-console.log(game(playRound));
+         const score = document.getElementById("result");
+         const para = document.createElement('p')
+         score.appendChild(para).textContent=`Player: ${playerScore} Computer: ${computerScore}`
+  
 
 
-
+       return  console.log(playerScore,computerScore, result);
+   
+ }
+ 
